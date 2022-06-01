@@ -1,0 +1,231 @@
+{
+	"info": {
+		"_postman_id": "1868ff5e-e5b3-4826-a4b5-5f19d85866f0",
+		"name": "Refund Status API",
+		"description": "show refund status ",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "refund/status/{order Id}",
+			"item": [
+				{
+					"name": "get refund status list",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "soedirman",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "soedirman",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8099/api/1.0/refund/status/ABC123?size=<string>&page=<string>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"api",
+								"1.0",
+								"refund",
+								"status",
+								"ABC123"
+							],
+							"query": [
+								{
+									"key": "size",
+									"value": "<string>"
+								},
+								{
+									"key": "page",
+									"value": "<string>"
+								}
+							]
+						},
+						"description": "get refund status list"
+					},
+					"response": [
+						{
+							"name": "Ok",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/refund/status/:orderId?size=<string>&page=<string>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"refund",
+										"status",
+										":orderId"
+									],
+									"query": [
+										{
+											"key": "size",
+											"value": "<string>"
+										},
+										{
+											"key": "page",
+											"value": "<string>"
+										}
+									],
+									"variable": [
+										{
+											"key": "orderId"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "get refund status detail",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "soedirman",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "soedirman",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8099/api/1.0/refund/status/:orderId/:refundId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"api",
+								"1.0",
+								"refund",
+								"status",
+								":orderId",
+								":refundId"
+							],
+							"variable": [
+								{
+									"key": "orderId",
+									"value": "<string>",
+									"description": "(Required) Order Id"
+								},
+								{
+									"key": "refundId",
+									"value": "<string>",
+									"description": "(Required) Order Id"
+								}
+							]
+						},
+						"description": "get refund status detail"
+					},
+					"response": [
+						{
+							"name": "Ok",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/refund/status/:orderId/:refundId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"refund",
+										"status",
+										":orderId",
+										":refundId"
+									],
+									"variable": [
+										{
+											"key": "orderId"
+										},
+										{
+											"key": "refundId"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "968776ac-3c90-40c9-a150-0f2b20b1c108",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "27fb3a22-9679-4ca4-946c-f4dcff6e6c01",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "a1e5f05d-abb9-4eee-88a7-b15013256ef3",
+			"key": "baseUrl",
+			"value": "http://presoedirmanapi.pegipegi.com"
+		}
+	],
+	"protocolProfileBehavior": {}
+}
